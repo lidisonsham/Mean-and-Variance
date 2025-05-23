@@ -1,5 +1,8 @@
 #  Mean and variance of a discrete  distribution
 
+NAME : Lidison sham M
+
+REG NO : 212224040171
 
 # Aim : 
 
@@ -49,9 +52,43 @@ It shows the distance of a random variable from its mean. It is calcualted as
 
 # Program :
 
+```
+developed by : Lidison sham M
+register no : 212224040171
+
+import numpy as np
+L=[int(i) for i in input().split()]
+N=len(L); M=max(L) 
+x=list();f=list()
+for i in range (M+1):
+    c = 0
+    for j in range(N):
+        if L[j]==i:
+            c=c+1
+    f.append(c)
+    x.append(i)
+sf=np.sum(f)
+p=list()
+for i in range(M+1):
+    p.append(f[i]/sf) 
+mean=np.inner(x,p)
+EX2=np.inner(np.square(x),p)
+var=EX2-mean**2 
+SD=np.sqrt(var)
+print("The Mean arrival rate is %.3f "%mean)
+print("The Variance of arrival from feeder is %.3f "%var) 
+print("The Standard deviation of arrival from feeder is %.3F "%SD)
+
+```
+
 
 
 # Output : 
+
+![Screenshot 2025-05-02 133704](https://github.com/user-attachments/assets/64b0c7f3-0f99-4623-b320-55a4faf59b0a)
+
+
+
 
 # Results :
 The mean and variance of arrivals of objects from feeder using probability distribution are calculated.
